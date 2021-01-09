@@ -13,7 +13,9 @@ def test_add_user(test_app, monkeypatch):
     def mock_add_user(username, email):
         return True
 
-    monkeypatch.setattr(src.api.users.views, "get_user_by_email", mock_get_user_by_email)
+    monkeypatch.setattr(
+        src.api.users.views, "get_user_by_email", mock_get_user_by_email
+    )
     monkeypatch.setattr(src.api.users.views, "add_user", mock_add_user)
 
     client = test_app.test_client()
@@ -58,7 +60,9 @@ def test_add_user_duplicate_email(test_app, monkeypatch):
     def mock_add_user(username, email):
         return True
 
-    monkeypatch.setattr(src.api.users.views, "get_user_by_email", mock_get_user_by_email)
+    monkeypatch.setattr(
+        src.api.users.views, "get_user_by_email", mock_get_user_by_email
+    )
     monkeypatch.setattr(src.api.users.views, "add_user", mock_add_user)
     client = test_app.test_client()
     client.post(
@@ -221,7 +225,9 @@ def test_update_user_duplicate_email(test_app, monkeypatch):
         return True
 
     monkeypatch.setattr(src.api.users.views, "get_user_by_id", mock_get_user_by_id)
-    monkeypatch.setattr(src.api.users.views, "get_user_by_email", mock_get_user_by_email)
+    monkeypatch.setattr(
+        src.api.users.views, "get_user_by_email", mock_get_user_by_email
+    )
     monkeypatch.setattr(src.api.users.views, "update_user", mock_update_user)
     client = test_app.test_client()
     resp = client.put(
