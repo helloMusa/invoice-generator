@@ -51,7 +51,7 @@ deploy:
     - docker:dind
   variables:
     DOCKER_DRIVER: overlay2
-    HEROKU_APP_NAME: infinite-tor-38484
+    HEROKU_APP_NAME: serene-shore-30476
     HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/web
   script:
     - apk add --no-cache curl
