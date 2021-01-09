@@ -7,7 +7,6 @@ from src import db
 # from flask_admin.contrib.sqla import ModelView
 
 
-
 class User(db.Model):
 
     __tablename__ = "users"
