@@ -11,10 +11,15 @@ def test_encode_token(test_app, test_database, add_user):
     user = add_user("justatest", "test@test.com", "test")
     token = user.encode_token(user.id, "access")
     assert isinstance(token, bytes)
+    token = user.encode_token(user.id, "refresh")
+    assert isinstance(token, bytes)
 
 
 def test_decode_token(test_app, test_database, add_user):
     user = add_user("justatest", "test@test.com", "test")
     token = user.encode_token(user.id, "access")
+    assert isinstance(token, bytes)
+    assert User.decode_token(token) == user.id
+    token = user.encode_token(user.id, "refresh")
     assert isinstance(token, bytes)
     assert User.decode_token(token) == user.id
