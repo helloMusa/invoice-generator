@@ -21,7 +21,7 @@ const users = [
 it("renders a username", () => {
   const { getByText } = render(<UsersList users={users} />);
   expect(getByText("musa")).toHaveClass("username");
-  expect(getByText("musa")).toHaveClass("username");
+  expect(getByText("musaali")).toHaveClass("username");
 });
 
 it("renders", () => {
