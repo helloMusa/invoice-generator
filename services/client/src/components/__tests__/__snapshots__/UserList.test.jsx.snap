@@ -3,16 +3,66 @@
 exports[`renders 1`] = `
 <DocumentFragment>
   <div>
-    <p
-      class="box title is-4 username"
+    <table
+      class="table is-hoverable is-fullwidth"
     >
-       musa
-    </p>
-    <p
-      class="box title is-4 username"
-    >
-       musaali
-    </p>
+      <thead>
+        <tr>
+          <th>
+            ID
+          </th>
+          <th>
+            Email
+          </th>
+          <th>
+            Username
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            1
+          </td>
+          <td>
+            musa6ali@gmail.com
+          </td>
+          <td
+            class="username"
+          >
+            musa
+          </td>
+          <td>
+            <button
+              class="button is-danger is-small"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            2
+          </td>
+          <td>
+            musa@mali.org
+          </td>
+          <td
+            class="username"
+          >
+            musaali
+          </td>
+          <td>
+            <button
+              class="button is-danger is-small"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </DocumentFragment>
 `;
